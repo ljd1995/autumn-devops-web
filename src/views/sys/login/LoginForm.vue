@@ -43,13 +43,11 @@
 
   import { useUserStore } from '/@/store/modules/user';
   import { LoginStateEnum, useLoginState, useFormRules, useFormValid } from './useLogin';
-  import { useDesign } from '/@/hooks/web/useDesign';
 
   const FormItem = Form.Item;
   const InputPassword = Input.Password;
   const { t } = useI18n();
-  const { notification, createErrorModal } = useMessage();
-  const { prefixCls } = useDesign('login');
+  const { notification } = useMessage();
   const userStore = useUserStore();
 
   const { getLoginState } = useLoginState();

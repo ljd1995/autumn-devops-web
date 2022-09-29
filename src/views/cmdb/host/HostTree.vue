@@ -114,7 +114,7 @@
           },
         },
       ];
-      function handleSuccess({ isUpdate, values }) {
+      function handleSuccess({ isUpdate }) {
         if (isUpdate) {
           createMessage.success('更新主机组成功');
         } else {

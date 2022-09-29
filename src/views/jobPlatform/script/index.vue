@@ -214,7 +214,7 @@
             });
           }
         })
-        .catch((err) => {})
+        .catch(() => {})
         .finally(() => {
           loadingRef.value = false;
         });

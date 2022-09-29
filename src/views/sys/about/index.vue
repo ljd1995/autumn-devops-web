@@ -16,7 +16,7 @@
   </PageWrapper>
 </template>
 <script lang="ts" setup>
-  import { h, onMounted, ref, unref } from 'vue';
+  import { h, onMounted, ref } from 'vue';
   import { Tag } from 'ant-design-vue';
   import { PageWrapper } from '/@/components/Page';
   import { Description, DescItem, useDescription } from '/@/components/Description/index';

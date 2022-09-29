@@ -115,7 +115,7 @@
           reload();
         }
       }
-      function handleTool(record: Recordable) {
+      function handleTool() {
         go('/assets/db_operator');
       }
 

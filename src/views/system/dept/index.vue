@@ -100,7 +100,7 @@
           });
       }
 
-      function handleSuccess({ isUpdate, values }) {
+      function handleSuccess({ isUpdate }) {
         if (isUpdate) {
           createMessage.success('更新部门成功');
         } else {

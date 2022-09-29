@@ -57,7 +57,6 @@
   import { columns, searchFormSchema } from './host.data';
   import { useMessage } from '/@/hooks/web/useMessage';
   import { useDrawer } from '/@/components/Drawer';
-  import { useGo } from '/@/hooks/web/usePage';
   import { useRouter } from 'vue-router';
 
   export default defineComponent({

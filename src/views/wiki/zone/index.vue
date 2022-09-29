@@ -73,7 +73,7 @@
       .then((res) => {
         zoneList.value = res.items;
       })
-      .catch((err) => {})
+      .catch(() => {})
       .finally(() => {
         loadingRef.value = false;
       });
@@ -105,7 +105,7 @@
     });
   };
 
-  const handleSuccess = ({ isUpdate, values }) => {
+  const handleSuccess = ({ isUpdate }) => {
     if (isUpdate) {
       createMessage.success('更新wiki空间成功');
     } else {

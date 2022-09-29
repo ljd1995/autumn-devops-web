@@ -24,15 +24,12 @@
   import { BasicForm, FormSchema, useForm } from '/@/components/Form/index';
   import { CodeEditor, MODE } from '/@/components/CodeEditor';
   import { ref } from 'vue';
-  import { ExecModule, ExecTask, getScriptInfo, getScriptOptions } from '/@/api/job/job';
-  import { useMessage } from '/@/hooks/web/useMessage';
+  import { ExecTask, getScriptInfo, getScriptOptions } from '/@/api/job/job';
   import { getHostGroupData } from '/@/api/cmdb/hostGroup';
 
   const codeMode = ref(MODE.HTML);
   const loadingRef = ref(false);
   const execResult = ref('');
-
-  const { createMessage } = useMessage();
 
   const playbookFormSchema: FormSchema[] = [
     {
@@ -166,7 +163,7 @@
         setFieldsValue({ exec_command: resp.exec_command, content: resp.content });
         updateContentLanguage(resp.exec_command);
       })
-      .catch((err) => {})
+      .catch(() => {})
       .finally(() => {
         loadingRef.value = false;
       });

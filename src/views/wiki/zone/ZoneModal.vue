@@ -18,7 +18,7 @@
       const isUpdate = ref(true);
       const rowId = ref('');
 
-      const [registerForm, { setFieldsValue, updateSchema, resetFields, validate }] = useForm({
+      const [registerForm, { setFieldsValue, resetFields, validate }] = useForm({
         labelWidth: 100,
         baseColProps: { span: 24 },
         schemas: formSchema,
