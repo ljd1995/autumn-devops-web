@@ -11,8 +11,8 @@
       @upload-img="handleUploadImg"
       pageFullScreen
       ><template #defFooters>
-        <span>{{ state.title }}</span>
-        <span
+        <span v-show="state.title">{{ state.title }}</span>
+        <span v-show="state.create_user"
           >由<span class="text-green-400">{{ state.create_user }}</span
           >创建,最后由<span class="text-blue-400">{{ state.update_user }}</span
           >更新</span
@@ -49,7 +49,7 @@
     remark: '',
     wiki_category_id: 0,
     previewTheme: 'smart-blue',
-    placeholder: '## 请尽情使用markdown编写吧... ##支持常用快捷键  ## 支持粘贴图片',
+    placeholder: '请尽情使用markdown编写吧... \n支持常用快捷键\n支持粘贴图片\n每分钟自动保存内容',
     toolbarsExclude: ['github'],
   });
 
