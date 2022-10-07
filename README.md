@@ -32,3 +32,7 @@ pnpm build
 ## 鸣谢
 
 [Vue-Vben-Admin](https://github.com/vbenjs/vue-vben-admin)
+
+## License
+
+[MIT © autumn-devops-2022](./LICENSE)
