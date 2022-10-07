@@ -46,13 +46,13 @@
         isUpdate.value = !!data?.isUpdate;
         isPage.value = !!data?.isPage;
         console.log(data.node);
+        zoneId.value = data?.zoneId;
         if (unref(isPage)) {
           page.id = data.node.page_id;
           page.content = data.node.content;
           page.secret = data.node.secret;
-        } else {
-          zoneId.value = data?.zoneId;
         }
+
         const treeData = await getWikiCategoryDataWithPage(zoneId.value);
 
         if (unref(isUpdate)) {
