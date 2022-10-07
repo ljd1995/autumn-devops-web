@@ -120,7 +120,7 @@
 
   const handleReconnect = (key) => {
     const hostId = hostList[key];
-    createMessage.info(`正在重新连接${hostId},请等待......`);
+    createMessage.info(`正在重新连接${hostId},请等待......`, 2);
     initSocket(hostId);
   };
 
@@ -129,7 +129,7 @@
     try {
       if (value && String(value).startsWith('host')) {
         const values = value.split('-');
-        createMessage.info(`正在连接${values[1]},请等待......`);
+        createMessage.info(`正在连接${values[1]},请等待......`, 2);
         add(values[1]);
         hostList[activeKey.value] = values[2];
         initSocket(values[2]);
