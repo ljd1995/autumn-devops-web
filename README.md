@@ -1,6 +1,6 @@
 <div align=center>
 
-![](./logo.png)
+![](./src/assets/images/logos.png)
 
 ![](https://img.shields.io/github/license/ljd1995/autumn-devops-web)
 ![](https://img.shields.io/badge/Vue.js-3.2-blue)
