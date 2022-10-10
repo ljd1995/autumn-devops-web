@@ -39,7 +39,7 @@ const cmdb: AppRouteModule = {
         title: t('routes.cmdb.configuration'),
         ignoreKeepAlive: false,
       },
-      component: () => import('/@/views/system/dept/index.vue'),
+      component: () => import('/@/views/cmdb/configCenter/index.vue'),
     },
     {
       path: 'db_operator',
