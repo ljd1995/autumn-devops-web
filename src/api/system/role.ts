@@ -9,7 +9,7 @@ import {
 } from './model/roleModel';
 
 enum Api {
-  Role = '/role',
+  Role = '/rbac/role',
 }
 
 export function getRolePageList(params: RoleListParam) {

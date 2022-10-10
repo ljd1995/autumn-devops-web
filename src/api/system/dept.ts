@@ -10,8 +10,8 @@ import {
 } from './model/deptModel';
 
 enum Api {
-  DepartmentData = '/department/children',
-  Department = '/department',
+  DepartmentData = '/rbac/department/children',
+  Department = '/rbac/department',
 }
 
 export function getDepartmentData(params: DepartmentDataParam) {

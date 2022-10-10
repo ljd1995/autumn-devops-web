@@ -8,8 +8,8 @@ import {
 import { defHttp } from '/@/utils/http/axios';
 
 enum Api {
-  Host = '/host',
-  AssociateHostGroup = '/host/host-group',
+  Host = '/cmdb/host',
+  AssociateHostGroup = '/cmdb/host/host-group',
 }
 
 export function getHostPageList(params: HostListParam) {

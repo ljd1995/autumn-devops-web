@@ -10,9 +10,9 @@ import {
 } from './model/hostGroupModel';
 
 enum Api {
-  HostGroupData = '/host-group/children',
-  HostGroupDataWithHost = '/host-group/children-host',
-  HostGroup = '/host-group',
+  HostGroupData = '/cmdb/host-group/children',
+  HostGroupDataWithHost = '/cmdb/host-group/children-host',
+  HostGroup = '/cmdb/host-group',
 }
 
 export function getHostGroupData(params: HostGroupDataParam) {

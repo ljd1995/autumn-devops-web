@@ -10,8 +10,8 @@ import {
 } from './model/userModel';
 
 enum Api {
-  User = '/user',
-  ModifyUserPassword = '/user/password',
+  User = '/rbac/user',
+  ModifyUserPassword = '/rbac/user/password',
 }
 
 export function getUserPageList(params: UserListParam) {

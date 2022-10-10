@@ -14,11 +14,11 @@ import { ErrorMessageMode } from '/#/axios';
 import { defHttp } from '/@/utils/http/axios';
 
 enum Api {
-  Db = '/db',
-  DbSchema = '/db/schema',
-  DbTable = '/db/table',
-  DbColumn = '/db/column',
-  DbSql = '/db/sql',
+  Db = '/cmdb/db',
+  DbSchema = '/cmdb/db/schema',
+  DbTable = '/cmdb/db/table',
+  DbColumn = '/cmdb/db/column',
+  DbSql = '/cmdb/db/sql',
 }
 
 export function getDbPageList(params: DbListParam) {
