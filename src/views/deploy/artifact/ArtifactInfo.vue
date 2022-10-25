@@ -52,9 +52,9 @@
                   handle=".text"
                   item-key="id"
                 >
-                  <template #item="{ element, index }">
+                  <template #item="{ element, elementIndex }">
                     <li class="list-group-item pt-2">
-                      <Tag>{{ index + 1 }}</Tag>
+                      <Tag>{{ elementIndex + 1 }}</Tag>
                       <Icon icon="fe:text-align-justify" class="handle mr-2" />
 
                       <span class="text">{{ element.name }} </span>
@@ -63,7 +63,7 @@
                         title="你确定删除该插件吗?"
                         ok-text="确定"
                         cancel-text="取消"
-                        @confirm="removeAt(record.plugins, index)"
+                        @confirm="removeAt(record.plugins, elementIndex)"
                       >
                         <Icon icon="ci:close-small" class="ml-1 close" />
                       </Popconfirm>
@@ -97,7 +97,7 @@
   import { Card, Popover, Tag, Popconfirm, Tooltip } from 'ant-design-vue';
   import { BasicForm, FormSchema, useForm } from '/@/components/Form';
   import { useRoute } from 'vue-router';
-  import { getArtifactInfo, updateArtifact } from '../../../api/deploy/cicd';
+  import { getArtifactInfo } from '../../../api/deploy/cicd';
   import { onMounted, ref, unref } from 'vue';
   import CICDPluginDrawer from './CICDPluginDrawer.vue';
   import PluginDetailDrawer from './PluginDetailDrawer.vue';
@@ -119,7 +119,7 @@
   const isUpdated = ref(false);
   const loadingRef = ref(false);
 
-  const { refreshPage, setTitle } = useTabs();
+  const { setTitle } = useTabs();
   const { createMessage } = useMessage();
 
   if (query.id) {
@@ -180,7 +180,7 @@
     },
   ];
 
-  const [registerTable, { updateTableDataRecord }] = useTable({
+  const [registerTable] = useTable({
     dataSource: pipelineList,
     rowKey: 'id',
     columns: pipelineColumns,
@@ -217,17 +217,16 @@
       const values = await validate();
       console.log('form data:', values);
       if (unref(isUpdated)) {
-        const plugins = pipelineList.value.map(item => {
-          return {
-            name: item.name,
-          }
-        })
-
-        await updateArtifact(query.id, {
-          name: values.name,
-          remark: values.remark,
-          pipelines: pipelineList.value,
-        });
+        // const plugins = pipelineList.value.map((item) => {
+        //   return {
+        //     name: item.name,
+        //   };
+        // });
+        // await updateArtifact(query.id, {
+        //   name: values.name,
+        //   remark: values.remark,
+        //   pipelines: pipelineList.value,
+        // });
       }
     } catch (error) {}
   }

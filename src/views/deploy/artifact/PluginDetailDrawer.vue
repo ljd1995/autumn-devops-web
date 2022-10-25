@@ -59,7 +59,7 @@
 </template>
 <script lang="ts" setup name="PluginDetailDrawer">
   import { ref, unref } from 'vue';
-  import { Steps, Step, Divider, Input } from 'ant-design-vue';
+  import { Steps, Step, Divider } from 'ant-design-vue';
   import { CICDPluginListItem } from '/@/api/deploy/model/cicdModel';
   import { BasicDrawer, useDrawerInner } from '/@/components/Drawer';
   import GitPlugin from './GitPlugin.vue';

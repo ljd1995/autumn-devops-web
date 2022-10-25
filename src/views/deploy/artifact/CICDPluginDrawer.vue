@@ -27,7 +27,7 @@
 
   const pluginList = ref<CICDPluginListItem[]>([]);
 
-  const [registerForm, { resetFields, validate, setFieldsValue, updateSchema }] = useForm({
+  const [registerForm, { validate, updateSchema }] = useForm({
     labelWidth: 110,
     baseColProps: { span: 24 },
     schemas: pipelineFormSchema,
