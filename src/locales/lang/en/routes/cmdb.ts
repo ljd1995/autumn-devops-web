@@ -4,5 +4,6 @@ export default {
   database: 'Database management',
   configuration: 'Config management',
   dbOperator: 'Database Operation',
-  terminal: 'terminal Operation',
+  terminal: 'Terminal Operation',
+  deployConfig: 'Deploy Config',
 };

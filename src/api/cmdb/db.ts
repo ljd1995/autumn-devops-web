@@ -25,6 +25,10 @@ export function getDbPageList(params: DbListParam) {
   return defHttp.get<DbListGetResultModel>({ url: Api.Db, params });
 }
 
+export function getDbInfo(id: any) {
+  return defHttp.get<DbListItem>({ url: Api.Db + '/' + id });
+}
+
 export function createDb(params: DbBaseModel) {
   return defHttp.post<DbListItem>({ url: Api.Db, params });
 }

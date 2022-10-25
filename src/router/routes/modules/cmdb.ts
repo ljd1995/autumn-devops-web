@@ -42,6 +42,15 @@ const cmdb: AppRouteModule = {
       component: () => import('/@/views/cmdb/configCenter/index.vue'),
     },
     {
+      path: 'deploy-config',
+      name: 'DeployConfig',
+      meta: {
+        title: t('routes.cmdb.deployConfig'),
+        ignoreKeepAlive: false,
+      },
+      component: () => import('/@/views/cmdb/deployConfig/index.vue'),
+    },
+    {
       path: 'db_operator',
       name: 'DbOperator',
       meta: {

@@ -38,7 +38,7 @@
     </BasicTable>
     <HostModal @register="registerModal" @success="handleSuccess" />
     <AssociateModal @register="registerAssociateModal" @success="handleSuccess" />
-    <HostDrawer @register="registerDrawer" @success="handleSuccess" />
+    <HostDrawer @register="registerDrawer" />
   </PageWrapper>
 </template>
 <script lang="ts">

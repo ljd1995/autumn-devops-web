@@ -5,4 +5,5 @@ export default {
   configuration: '配置中心',
   dbOperator: '数据库操作',
   terminal: 'web终端',
+  deployConfig: '部署配置',
 };

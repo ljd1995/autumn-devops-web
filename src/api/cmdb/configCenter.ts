@@ -14,6 +14,10 @@ export function getConfigCenterPageList(params: ConfigCenterListParam) {
   return defHttp.get<ConfigCenterListGetResultModel>({ url: Api.ConfigCenter, params });
 }
 
+export function getConfigCenterInfo(id: any) {
+  return defHttp.get<ConfigCenterListItem>({ url: Api.ConfigCenter + '/' + id });
+}
+
 export function createConfigCenter(params: ConfigCenterBaseModel) {
   return defHttp.post<ConfigCenterListItem>({ url: Api.ConfigCenter, params });
 }
@@ -25,4 +29,3 @@ export function updateConfigCenter(id: any, params: ConfigCenterBaseModel) {
 export function deleteConfigCenter(id: any) {
   return defHttp.delete({ url: Api.ConfigCenter + '/' + id });
 }
-
